@@ -1,0 +1,8 @@
+{
+  "arithmetic": "Python Decimal",
+  "decimal_precision": 100,
+  "epochs": 20,
+  "model": "A=3I, Q=I, P0=I; pair-sum observations 12,23,31 with R=1",
+  "scope": "Illustration only; the analytic induction establishes divergence.",
+  "explicit_checks_passed": 521
+}

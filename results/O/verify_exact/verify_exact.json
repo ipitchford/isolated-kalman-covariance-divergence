@@ -1,0 +1,63 @@
+{
+  "status": "all_exact_checks_passed",
+  "first_innovations": [
+    "11",
+    "96/11"
+  ],
+  "before_third": [
+    [
+      "30/11",
+      "25/16",
+      "0"
+    ],
+    [
+      "25/16",
+      "15/8",
+      "25/16"
+    ],
+    [
+      "0",
+      "25/16",
+      "205/96"
+    ]
+  ],
+  "determinant_before_third": "-257375/270336",
+  "third_measurement": [
+    "2",
+    "-3",
+    "2"
+  ],
+  "negative_quadratic_form": "-155/132",
+  "singular_positive_noise": "155/132",
+  "robust_noise": "5/4",
+  "robust_innovation": "5/66",
+  "robust_negative_marginals": [
+    "-645/128",
+    "-105/32",
+    "-5/32"
+  ],
+  "open_all_negative_noise_interval": [
+    "155/132",
+    "2265/1804"
+  ],
+  "participant_overlap_witness_after": [
+    [
+      "5/9",
+      "4/9",
+      "5/18"
+    ],
+    [
+      "4/9",
+      "5/9",
+      "-5/18"
+    ],
+    [
+      "5/18",
+      "-5/18",
+      "1"
+    ]
+  ],
+  "participant_overlap_determinant": "-7/162",
+  "script_sha256": "781d9ba4a228476a992d32da2844582783194dbc279ab77ae01c710d75f7a996",
+  "explicit_checks_passed": 17
+}

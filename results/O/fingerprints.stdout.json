@@ -1,0 +1,272 @@
+{
+  "purpose": "Object identity and search fingerprints; not novelty claims for these standard ingredients.",
+  "instances": [
+    {
+      "n": 2,
+      "ordered_edges_zero_based": [
+        [
+          0,
+          1
+        ]
+      ],
+      "comparison_matrix": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "rank": 1,
+      "trace": "2",
+      "determinant": "0",
+      "characteristic_coefficients_descending": [
+        "1",
+        "-2",
+        "0"
+      ],
+      "row_sums": [
+        "2",
+        "2"
+      ],
+      "column_sums": [
+        "2",
+        "2"
+      ],
+      "sorted_entries": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "matrix_sha256": "b2e4fc36d5dee3a3c48a1499254e0f02049aa4d668232383dea374f3ba79d937",
+      "transpose_sha256": "b2e4fc36d5dee3a3c48a1499254e0f02049aa4d668232383dea374f3ba79d937",
+      "canonical_simultaneous_relabelling_sha256": "b2e4fc36d5dee3a3c48a1499254e0f02049aa4d668232383dea374f3ba79d937"
+    },
+    {
+      "n": 3,
+      "ordered_edges_zero_based": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "comparison_matrix": [
+        [
+          2,
+          2,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          2,
+          2,
+          1
+        ]
+      ],
+      "rank": 2,
+      "trace": "4",
+      "determinant": "0",
+      "characteristic_coefficients_descending": [
+        "1",
+        "-4",
+        "-1",
+        "0"
+      ],
+      "row_sums": [
+        "5",
+        "3",
+        "5"
+      ],
+      "column_sums": [
+        "5",
+        "5",
+        "3"
+      ],
+      "sorted_entries": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2
+      ],
+      "matrix_sha256": "a5aa8ddf8bf3a8b4b881000defca58037832916325d7e0977f73c3e6c6a6d57e",
+      "transpose_sha256": "d7643012658a4d5ccf5118c6396d9bdf85eaf386c9aaa509073ecab62a9afc9b",
+      "canonical_simultaneous_relabelling_sha256": "305ba72899cf8bf224c9e40464b235c68154bddd0f7699f35db49dcacf1d00f4"
+    },
+    {
+      "n": 5,
+      "ordered_edges_zero_based": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          0
+        ]
+      ],
+      "comparison_matrix": [
+        [
+          2,
+          2,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          2,
+          2,
+          1,
+          1,
+          1
+        ]
+      ],
+      "rank": 4,
+      "trace": "6",
+      "determinant": "0",
+      "characteristic_coefficients_descending": [
+        "1",
+        "-6",
+        "5",
+        "0",
+        "-1",
+        "0"
+      ],
+      "row_sums": [
+        "7",
+        "3",
+        "4",
+        "5",
+        "7"
+      ],
+      "column_sums": [
+        "7",
+        "7",
+        "5",
+        "4",
+        "3"
+      ],
+      "sorted_entries": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2
+      ],
+      "matrix_sha256": "2686ede1d5f859569fe09b283ebdecad02686977e34926e4533f07ce6a3334c2",
+      "transpose_sha256": "32825e9f95f9365af61fd8914bf8d18914076a05abeb8d2cec5b28dcb7ddbf48",
+      "canonical_simultaneous_relabelling_sha256": "e35ede3ea30d16fa1a3db9a5d132e3ca81d53368dbd5089577cd3429f96fd04f"
+    }
+  ],
+  "lower_bound_sequence": [
+    "1",
+    "2",
+    "19/5",
+    "176/25",
+    "1609/125",
+    "14606/625",
+    "132079/3125",
+    "1191836/15625",
+    "10742149/78125",
+    "96757466/390625",
+    "871207819/1953125",
+    "7842823496/9765625"
+  ],
+  "lower_bound_recurrence": "b_(k+1)=(9*b_k+1)/5; b_0=1",
+  "lower_bound_ordinary_generating_function": "(5-4*z)/(5-14*z+9*z^2)",
+  "scaled_integer_sequence": [
+    1,
+    10,
+    95,
+    880,
+    8045,
+    73030,
+    660395,
+    5959180,
+    53710745,
+    483787330,
+    4356039095,
+    39214117480
+  ],
+  "scaled_sequence_ordinary_generating_function": "(1-4*z)/(1-14*z+45*z^2)",
+  "triangle_perron_root": "2+sqrt(5)",
+  "triangle_perron_vector": [
+    "(1+sqrt(5))/2",
+    "1",
+    "(1+sqrt(5))/2"
+  ],
+  "script_sha256": "7b739d16e907cfb38d8a124c427daae7b6343bd5f729b3c0112ae1ae540f0948",
+  "explicit_checks_passed": 4
+}

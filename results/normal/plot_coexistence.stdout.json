@@ -1,0 +1,28 @@
+{
+  "script": "plot_coexistence.py",
+  "label": "illustration (Decimal arithmetic)",
+  "a2": "21/20",
+  "epochs": 300,
+  "precision": 150,
+  "final": {
+    "1": {
+      "reported_min": "1.4282164411e+0",
+      "reported_max": "1.6897345899e+0",
+      "true_error_max": "7.9316952903e-1",
+      "central_max": "4.8465438824e-1"
+    },
+    "10000": {
+      "reported_min": "2.7841226791e+9",
+      "reported_max": "2.7841226798e+9",
+      "true_error_max": "7.7570584090e-1",
+      "central_max": "4.8465438824e-1"
+    },
+    "1000000000000": {
+      "reported_min": "2.8130297760e+17",
+      "reported_max": "2.8130297760e+17",
+      "true_error_max": "7.7570584092e-1",
+      "central_max": "4.8465438824e-1"
+    }
+  },
+  "explicit_checks_passed": 2706
+}

@@ -1,0 +1,85 @@
+{
+  "status": "all_exact_checks_passed",
+  "observability_determinant": 2,
+  "initial_covariance": "I_3",
+  "state_transition": "3 I_3",
+  "process_covariance": "I_3",
+  "measurement_variances": [
+    1,
+    1,
+    1
+  ],
+  "comparison_matrix": [
+    [
+      2,
+      2,
+      1
+    ],
+    [
+      1,
+      1,
+      1
+    ],
+    [
+      2,
+      2,
+      1
+    ]
+  ],
+  "comparison_characteristic_polynomial": "lambda*(lambda^2-4*lambda-1)",
+  "after_first_epoch": [
+    [
+      "181610/72181",
+      "-3467100/2237611",
+      "-1100/551"
+    ],
+    [
+      "-3467100/2237611",
+      "110/31",
+      "-1100/551"
+    ],
+    [
+      "-1100/551",
+      "-1100/551",
+      "1310/551"
+    ]
+  ],
+  "innovations": [
+    "21",
+    "341/21",
+    "72181/7161"
+  ],
+  "finite_snapshots": [
+    {
+      "epoch": 1,
+      "minimum_marginal_approx": 2.3774954627949185,
+      "rigorous_lower_bound": "2",
+      "global_determinant_sign": -1,
+      "exact_numerator_max_bits": 22
+    },
+    {
+      "epoch": 2,
+      "minimum_marginal_approx": 14.97332588617357,
+      "rigorous_lower_bound": "19/5",
+      "global_determinant_sign": -1,
+      "exact_numerator_max_bits": 471
+    },
+    {
+      "epoch": 3,
+      "minimum_marginal_approx": 114.23142713175231,
+      "rigorous_lower_bound": "176/25",
+      "global_determinant_sign": -1,
+      "exact_numerator_max_bits": 9848
+    },
+    {
+      "epoch": 4,
+      "minimum_marginal_approx": 981.9618919464208,
+      "rigorous_lower_bound": "1609/125",
+      "global_determinant_sign": -1,
+      "exact_numerator_max_bits": 202786
+    }
+  ],
+  "proof_lower_bound": "min_i p_i(k) >= (5/4)*(9/5)^k - 1/4",
+  "script_sha256": "b4b55734551ae386d2f8aaf41b2d60ea56a69cfb53c7cbd8e3bc1fde5bb01a1d",
+  "explicit_checks_passed": 240
+}

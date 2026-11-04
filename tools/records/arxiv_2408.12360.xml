@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/mZmNlG4O1vubLz/P/WCBgxzO64I</id>
+  <title>arXiv Query: search_query=&amp;id_list=2408.12360&amp;start=0&amp;max_results=10</title>
+  <updated>2026-11-04T02:48:18Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=&amp;start=0&amp;max_results=10&amp;id_list=2408.12360" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
+  <opensearch:totalResults>1</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2408.12360v1</id>
+    <title>Recursive Distributed Collaborative Aided Inertial Navigation</title>
+    <updated>2024-08-22T12:58:16Z</updated>
+    <link href="https://arxiv.org/abs/2408.12360v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2408.12360v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this dissertation, we investigate the issue of robust localization in swarms of heterogeneous mobile agents with multiple and time-varying sensing modalities. Our focus is the development of filter-based and decoupled estimators under the assumption that agents possess communication and processing capabilities. Based on the findings from Distributed Collaborative State Estimation and modular sensor fusion, we propose a novel Kalman filter decoupling paradigm, which is termed Isolated Kalman Filtering (IKF). This paradigm is formally discussed and the treatment of delayed measurement is studied. The impact of approximation made was investigated on different observation graphs and the filter credibility was evaluated on a linear system in a Monte Carlo simulation. Finally, we propose a multi-agent modular sensor fusion approach based on the IKF paradigm, in order to cooperatively estimate the global state of a multi-agent system in a distributed way and fuse information provided by different on-board sensors in a computationally efficient way. As a consequence, this approach can be performed distributed among agents, while (i) communication between agents is only required at the moment of inter-agent joint observations, (ii) one agent acts as interim master to process state corrections isolated, (iii) agents can be added and removed from the swarm, (iv) each agent's full state can vary during mission (each local sensor suite can be truly modular), and (v) delayed and multi-rate sensor updates are supported. Extensive evaluation on realistic simulated and real-world data sets show that the proposed Isolated Kalman Filtering (IKF) paradigm, is applicable for both, truly modular single agent estimation and distributed collaborative multi-agent estimation problems.</summary>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-08-22T12:58:16Z</published>
+    <arxiv:comment>PhD thesis</arxiv:comment>
+    <arxiv:primary_category term="cs.RO"/>
+    <author>
+      <name>Roland Jung</name>
+    </author>
+  </entry>
+</feed>

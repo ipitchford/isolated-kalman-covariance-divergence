@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "Please cite this versioned research candidate by its DOI."
+title: "Observable systems with divergent isolated Kalman covariances: a counterexample to the isolated Kalman filtering convergence conjecture"
+type: software
+authors:
+  - name: Anonymous
+version: 0.1.0-candidate
+doi: 10.5281/zenodo.23935675
+date-released: 2026-11-04
+repository-code: "https://github.com/ipitchford/isolated-kalman-covariance-divergence"
+url: "https://evidencepress.org/releases/isolated-kalman-covariance-divergence/"
+license:
+  - CC0-1.0
+  - MIT
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.23935675
+    description: "Version DOI (0.1.0-candidate)"
+  - type: doi
+    value: 10.5281/zenodo.23935674
+    description: "Concept DOI (all versions)"
+keywords:
+  - isolated Kalman filter
+  - decentralized estimation
+  - covariance divergence
+  - Riccati recursion
+  - counterexample
+abstract: "Counterexample to the convergence conjecture for the isolated Kalman filter (Jung, Luft and Weiss, Autonomous Robots 2025): a three-node system with pair-sum observations, observable and controllable, whose reported variances satisfy m_k >= (5/4)(9/5)^k - 1/4 while the centralised Kalman filter stays at most 3/4. Computer-assisted proofs show divergence of large priors for a^2 in (1, 1.38] and coexistence of bounded and divergent trajectories at a^2 = 21/20. Stable dynamics give bounded marginals. Unrefereed candidate; internal AI-assisted review only. Text CC0-1.0; code MIT."

@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/yhVpYzNltN/ThYjfFrzAjLK0oq8</id>
+  <title>arXiv Query: search_query=&amp;id_list=1111.4580&amp;start=0&amp;max_results=10</title>
+  <updated>2026-11-04T02:48:18Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=&amp;start=0&amp;max_results=10&amp;id_list=1111.4580" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
+  <opensearch:totalResults>1</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/1111.4580v1</id>
+    <title>Networked estimation under information constraints</title>
+    <updated>2011-11-19T20:08:38Z</updated>
+    <link href="https://arxiv.org/abs/1111.4580v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1111.4580v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, we study estimation of potentially unstable linear dynamical systems when the observations are distributed over a network. We are interested in scenarios when the information exchange among the agents is restricted. In particular, we consider that each agent can exchange information with its neighbors only once per dynamical system evolution-step. Existing work with similar information-constraints is restricted to static parameter estimation, whereas, the work on dynamical systems assumes large number of information exchange iterations between every two consecutive system evolution steps.
+  We show that when the agent communication network is sparely-connected, the sparsity of the network plays a key role in the stability and performance of the underlying estimation algorithm. To this end, we introduce the notion of \emph{Network Tracing Capacity} (NTC), which is defined as the largest two-norm of the system matrix that can be estimated with bounded error. Extending this to fully-connected networks or infinite information exchanges (per dynamical system evolution-step), we note that the NTC is infinite, i.e., any dynamical system can be estimated with bounded error. In short, the NTC characterizes the estimation capability of a sparse network by relating it to the evolution of the underlying dynamical system.</summary>
+    <category term="cs.IT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.MA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2011-11-19T20:08:38Z</published>
+    <arxiv:comment>Submitted to IEEE TAC</arxiv:comment>
+    <arxiv:primary_category term="cs.IT"/>
+    <author>
+      <name>Usman A. Khan</name>
+    </author>
+    <author>
+      <name>Ali Jadbabaie</name>
+    </author>
+  </entry>
+</feed>

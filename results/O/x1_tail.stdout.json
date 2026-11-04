@@ -1,0 +1,1 @@
+{"script": "cert_x1_tail.py", "intervals": 190, "all_ok": true, "global_loss_upper": 3.1716317142541, "first_interval_loss_lower": 2.01046743239761, "theta0": "1e-6", "N": 4, "failed": []}

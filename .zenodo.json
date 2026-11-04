@@ -1,0 +1,108 @@
+{
+ "title": "Observable systems with divergent isolated Kalman covariances: a counterexample to the isolated Kalman filtering convergence conjecture",
+ "upload_type": "publication",
+ "publication_type": "preprint",
+ "description": "<p><strong>Unrefereed research candidate.</strong> The isolated Kalman filter (IsoKF) of Jung, Luft and Weiss (Autonomous Robots, 2025) lets the nodes of a robot or sensor network share an estimation task cheaply: only the nodes involved in a measurement update, and their correlations with everyone else are rescaled by a correction factor. Its authors conjectured that for any completely observable and controllable system the covariance it reports converges to a finite, unique, stable steady state.</p><p><strong>Result: the conjecture is false.</strong> A three-node system with pair-sum observations x1+x2, x2+x3, x3+x1 and dynamics A = 3I is observable from one epoch and controllable, every local block the filter uses stays positive definite, yet the reported marginal variances satisfy m_k &ge; (5/4)(9/5)^k &minus; 1/4, while the centralised Kalman filter keeps every variance at most 3/4. A Perron-root comparison extends divergence to every connected non-bipartite pair-sum graph when a^2 is large enough; extra attenuation or deletion of cross-covariances does not help. Schur-stable dynamics always give bounded marginals (proved). Computer-assisted proofs (outward-rounded interval arithmetic) show that for a^2 in (1, 1.38] large priors diverge at rate a^(2k), entry certified from 10^12 I at eight values down to a^2 = 1 + 10^-8, and that at a^2 = 21/20 the prior I converges while 10^12 I diverges: there is no globally attracting steady covariance. Also: exact classification of participant overlaps (|U &cap; V| &le; 1) that keep every local block positive definite, and a bounded regime for anchored relative measurements.</p><p>Scope: in high-precision numerical tests the actual estimation error stays bounded; the failure is gross pessimism of the reported covariance, not divergence of the estimate. The counterexample uses pair-sum measurements, not plain differences. Nothing is proved for a^2 in (1.38, 2+&radic;5); uniqueness for stable dynamics remains open. The ikf_lib software was inspected but not run; no software failure is claimed.</p><p>Archive: LaTeX manuscript and PDF, bibliography with registry records, exact rational verifiers, interval certificates C1&ndash;C3, numerical scripts and their outputs (normal and python -O), figures, CI and SHA-256 manifest. Assurance: internal AI-assisted review only (not human peer review, independent reproduction or formal verification); certificates are computer-assisted, not formal proofs. Creator: Anonymous. Text CC0-1.0; code MIT.</p>",
+ "creators": [
+  {
+   "name": "Anonymous"
+  }
+ ],
+ "access_right": "open",
+ "license": "cc-zero",
+ "version": "0.1.0-candidate",
+ "publication_date": "2026-11-04",
+ "keywords": [
+  "isolated Kalman filter",
+  "decentralized estimation",
+  "covariance divergence",
+  "Riccati recursion",
+  "collaborative state estimation",
+  "multi-robot localization",
+  "interval arithmetic",
+  "counterexample"
+ ],
+ "notes": "Code (scripts/ and tools/) is MIT; prose, manuscript, figures, data, records and all other files are CC0-1.0 (see LICENSE.md). Bibliographic records in tools/records/ are factual registry metadata.",
+ "related_identifiers": [
+  {
+   "identifier": "https://github.com/ipitchford/isolated-kalman-covariance-divergence/tree/v0.1.0-candidate",
+   "relation": "isSupplementTo",
+   "scheme": "url"
+  },
+  {
+   "identifier": "https://evidencepress.org/releases/isolated-kalman-covariance-divergence/",
+   "relation": "isDocumentedBy",
+   "scheme": "url"
+  },
+  {
+   "identifier": "10.1007/s10514-025-10191-x",
+   "relation": "references",
+   "scheme": "doi"
+  },
+  {
+   "identifier": "10.15607/RSS.2016.XII.016",
+   "relation": "references",
+   "scheme": "doi"
+  },
+  {
+   "identifier": "10.1177/0278364918760698",
+   "relation": "references",
+   "scheme": "doi"
+  },
+  {
+   "identifier": "10.1098/rsos.172348",
+   "relation": "references",
+   "scheme": "doi"
+  },
+  {
+   "identifier": "10.1109/ACC.1997.609105",
+   "relation": "references",
+   "scheme": "doi"
+  },
+  {
+   "identifier": "10.1109/TRA.2002.803461",
+   "relation": "references",
+   "scheme": "doi"
+  },
+  {
+   "identifier": "10.1016/B978-1-4831-6716-9.50011-4",
+   "relation": "references",
+   "scheme": "doi"
+  },
+  {
+   "identifier": "10.1109/IVS.2012.6232155",
+   "relation": "references",
+   "scheme": "doi"
+  },
+  {
+   "identifier": "10.1109/TAC.1984.1103465",
+   "relation": "references",
+   "scheme": "doi"
+  },
+  {
+   "identifier": "10.1162/089976601750541769",
+   "relation": "references",
+   "scheme": "doi"
+  },
+  {
+   "identifier": "10.1109/LCSYS.2025.3576671",
+   "relation": "references",
+   "scheme": "doi"
+  },
+  {
+   "identifier": "arXiv:2408.12360",
+   "relation": "references",
+   "scheme": "arxiv"
+  },
+  {
+   "identifier": "arXiv:1111.4580",
+   "relation": "references",
+   "scheme": "arxiv"
+  },
+  {
+   "identifier": "arXiv:2603.01404",
+   "relation": "references",
+   "scheme": "arxiv"
+  }
+ ]
+}

@@ -1,0 +1,182 @@
+{
+ "schemaVersion": "1.0",
+ "provenance": "Compiled 4 November 2026 for release 0.1.0-candidate from the dated prior-art and corpus checks of 1-4 November 2026 (manuscript Section 11 Prior-art search; internal corpus check) and the reference retrieval for the bibliography. It documents the scrutiny performed, not historical priority. No new priority search was run at release preparation.",
+ "contributionMap": [
+  {
+   "claim": "Theorem 4.1: a three-node pair-sum system with A = 3I, observable from one epoch and controllable, whose IsoKF reported marginals satisfy m_k >= (5/4)(9/5)^k - 1/4 while every local block stays positive definite and the centralised Kalman filter stays <= 3/4; refutes the IsoKF convergence conjecture.",
+   "unit": "statement",
+   "paperLocation": "Theorem 4.1, Section 4",
+   "searches": [
+    {
+     "date": "2026-11-04",
+     "corpus": "two web search engines, arXiv, the publisher full text of Jung, Luft and Weiss (2025), the full 2016 RSS precursor, relevant chapters of the 2023 dissertation (arXiv:2408.12360), the ikf_lib repository, GitHub issues/discussions, Semantic Scholar and a forward-citation sweep; Evidence Press live feed (233 items) and earlier batch folders",
+     "query": "isolated Kalman filter convergence conjecture; IsoKF covariance divergence or counterexample; ikf_lib divergence; decentralized collaborative localization covariance boundedness; Luft Jung Weiss correction factor"
+    },
+    {
+     "date": "2026-11-04",
+     "corpus": "api.crossref.org and export.arxiv.org (tools/records/)",
+     "query": "registry records for every bibliography entry"
+    }
+   ],
+   "closestPriorWork": "Jung, Luft and Weiss 2025 (conjecture, stability remark); Luft et al. 2016/2018 (marginal-ratio correction); no divergence analysis found",
+   "verdict": "new-in-bounded-search"
+  },
+  {
+   "claim": "Theorem 5.1 and Corollary 5.3: Perron-root criterion for every connected non-bipartite pair-sum graph; attenuation or deletion of cross-covariances does not restore boundedness.",
+   "unit": "statement",
+   "paperLocation": "Section 5",
+   "searches": [
+    {
+     "date": "2026-11-04",
+     "corpus": "two web search engines, arXiv, the publisher full text of Jung, Luft and Weiss (2025), the full 2016 RSS precursor, relevant chapters of the 2023 dissertation (arXiv:2408.12360), the ikf_lib repository, GitHub issues/discussions, Semantic Scholar and a forward-citation sweep; Evidence Press live feed (233 items) and earlier batch folders",
+     "query": "isolated Kalman filter convergence conjecture; IsoKF covariance divergence or counterexample; ikf_lib divergence; decentralized collaborative localization covariance boundedness; Luft Jung Weiss correction factor"
+    },
+    {
+     "date": "2026-11-04",
+     "corpus": "neighbouring literature named by internal reviewers: Schmidt/consider filter, covariance intersection, split covariance intersection, Roumeliotis-Bekey distributed localization, Gaussian belief propagation, Riccati convergence for nonstabilisable systems",
+     "query": "consider filter divergence; covariance intersection consistency; Gaussian belief propagation variance convergence; Riccati difference equation convergence"
+    }
+   ],
+   "closestPriorWork": "Odd-cycle conditions in Gaussian belief propagation (Weiss and Freeman 2001) are analogous but concern a different recursion",
+   "verdict": "new-in-bounded-search"
+  },
+  {
+   "claim": "Theorems 6.2, 6.4 and Corollaries 6.3, 6.5 (computer-assisted): divergence of large priors for a^2 in (1, 1.38], certified entry at eight values, coexistence of bounded and divergent trajectories at a^2 = 21/20.",
+   "unit": "statement",
+   "paperLocation": "Section 6",
+   "searches": [
+    {
+     "date": "2026-11-04",
+     "corpus": "two web search engines, arXiv, the publisher full text of Jung, Luft and Weiss (2025), the full 2016 RSS precursor, relevant chapters of the 2023 dissertation (arXiv:2408.12360), the ikf_lib repository, GitHub issues/discussions, Semantic Scholar and a forward-citation sweep; Evidence Press live feed (233 items) and earlier batch folders",
+     "query": "isolated Kalman filter convergence conjecture; IsoKF covariance divergence or counterexample; ikf_lib divergence; decentralized collaborative localization covariance boundedness; Luft Jung Weiss correction factor"
+    }
+   ],
+   "closestPriorWork": "Classical Riccati convergence (Chan, Goodwin and Sin 1984) for the centralised filter",
+   "verdict": "new-in-bounded-search"
+  },
+  {
+   "claim": "Theorem 8.1: participant-family criterion |U cap V| <= 1 for local positive definiteness; Proposition 9.1 anchored relative observations bounded; Proposition 3.1 stable dynamics bounded.",
+   "unit": "statement",
+   "paperLocation": "Sections 3, 8, 9",
+   "searches": [
+    {
+     "date": "2026-11-04",
+     "corpus": "two web search engines, arXiv, the publisher full text of Jung, Luft and Weiss (2025), the full 2016 RSS precursor, relevant chapters of the 2023 dissertation (arXiv:2408.12360), the ikf_lib repository, GitHub issues/discussions, Semantic Scholar and a forward-citation sweep; Evidence Press live feed (233 items) and earlier batch folders",
+     "query": "isolated Kalman filter convergence conjecture; IsoKF covariance divergence or counterexample; ikf_lib divergence; decentralized collaborative localization covariance boundedness; Luft Jung Weiss correction factor"
+    },
+    {
+     "date": "2026-11-04",
+     "corpus": "neighbouring literature named by internal reviewers: Schmidt/consider filter, covariance intersection, split covariance intersection, Roumeliotis-Bekey distributed localization, Gaussian belief propagation, Riccati convergence for nonstabilisable systems",
+     "query": "consider filter divergence; covariance intersection consistency; Gaussian belief propagation variance convergence; Riccati difference equation convergence"
+    }
+   ],
+   "closestPriorWork": "Schur-complement and consider-filter arguments (Schmidt 1966); stated as elementary where standard",
+   "verdict": "new-in-bounded-search"
+  },
+  {
+   "claim": "Method: sign-cone invariant plus harmonic-mean lower bound for the marginal-ratio recursion (Lemmas 4.2-4.3), and the deficit-form interval certificates for the IsoKF recursion (Lemma 6.1, certificates C1-C3).",
+   "unit": "method",
+   "paperLocation": "Sections 4 and 6",
+   "searches": [
+    {
+     "date": "2026-11-04",
+     "corpus": "two web search engines, arXiv, the publisher full text of Jung, Luft and Weiss (2025), the full 2016 RSS precursor, relevant chapters of the 2023 dissertation (arXiv:2408.12360), the ikf_lib repository, GitHub issues/discussions, Semantic Scholar and a forward-citation sweep; Evidence Press live feed (233 items) and earlier batch folders",
+     "query": "isolated Kalman filter convergence conjecture; IsoKF covariance divergence or counterexample; ikf_lib divergence; decentralized collaborative localization covariance boundedness; Luft Jung Weiss correction factor"
+    },
+    {
+     "date": "2026-11-04",
+     "corpus": "neighbouring literature named by internal reviewers: Schmidt/consider filter, covariance intersection, split covariance intersection, Roumeliotis-Bekey distributed localization, Gaussian belief propagation, Riccati convergence for nonstabilisable systems",
+     "query": "consider filter divergence; covariance intersection consistency; Gaussian belief propagation variance convergence; Riccati difference equation convergence"
+    }
+   ],
+   "closestPriorWork": "Standard interval-arithmetic validated numerics and cone-invariance arguments; no prior application to IsoKF found",
+   "verdict": "new-in-bounded-search"
+  }
+ ],
+ "sourcesReadInFull": [
+  {
+   "citation": "Jung, Luft and Weiss, Isolated Kalman filtering: theory and decoupled estimator design, Autonomous Robots 49(1):7, 2025, DOI 10.1007/s10514-025-10191-x",
+   "usedFor": "Problem source: conjecture (quoted), update equations (47)-(50), remark on unstable dynamics",
+   "readWhat": "Open-access full text",
+   "date": "2026-11-04",
+   "evidenceLocator": "manuscript Section 1 and Table 2"
+  },
+  {
+   "citation": "Luft, Schubert, Roumeliotis and Burgard, Recursive decentralized collaborative localization for sparsely communicating robots, RSS 2016, DOI 10.15607/RSS.2016.XII.016",
+   "usedFor": "Origin of the marginal-ratio cross-covariance correction",
+   "readWhat": "Full text",
+   "date": "2026-11-04",
+   "evidenceLocator": "manuscript Sections 2 and 10"
+  },
+  {
+   "citation": "aau-cns/ikf_lib at commit 4c0d0ec4600b663cb116698d514e055fb371919d",
+   "usedFor": "Software scope: observation handler, PSD check and projection",
+   "readWhat": "Source code (not compiled or run)",
+   "date": "2026-11-02",
+   "evidenceLocator": "manuscript Section 11 Software scope"
+  }
+ ],
+ "limitationTriage": [
+  {
+   "limitation": "Certified entry into the escape region is shown only at eight values of a^2; nothing is proved for a^2 in (1.38, 2+sqrt5).",
+   "closingQuestion": "Can entry be certified uniformly on (1, 1.38] and can the gap (1.38, 2+sqrt5) be closed?",
+   "triedOrSearched": "Certificates C1-C3 cover the stated values; a uniform entry argument was not found in the revision round.",
+   "estimatedCost": "days",
+   "decision": "OPEN",
+   "cheap": false,
+   "reasonOpen": "New research.",
+   "whyNotClosedNow": "Beyond the scope of this release."
+  },
+  {
+   "limitation": "Bounded actual estimation error and the divergence thresholds are numerical findings, not theorems.",
+   "closingQuestion": "Is the actual IsoKF error covariance provably bounded in the divergent cases?",
+   "triedOrSearched": "80-digit exact linear recursion and an independent Decimal recursion agree (Finding 7.1).",
+   "estimatedCost": "weeks",
+   "decision": "OPEN",
+   "cheap": false,
+   "reasonOpen": "New research.",
+   "whyNotClosedNow": "Beyond the scope of this release."
+  },
+  {
+   "limitation": "Uniqueness of the steady state for Schur-stable dynamics, and global behaviour at a = 1, remain open.",
+   "closingQuestion": "Is the IsoKF fixed point unique when A is Schur stable?",
+   "triedOrSearched": "Proposition 3.1 proves boundedness only; stated as open question (iv).",
+   "estimatedCost": "weeks",
+   "decision": "OPEN",
+   "cheap": false,
+   "reasonOpen": "New research.",
+   "whyNotClosedNow": "Beyond the scope of this release."
+  },
+  {
+   "limitation": "Certificates and exact checks could be silently disabled under python -O or accept a corrupted claim.",
+   "closingQuestion": "Do the verifiers fail when an expected value is wrong, including under python -O?",
+   "triedOrSearched": "All checks are explicit (no assert); a corrupted determinant makes verify_exact.py exit non-zero under -O (release gate negative control).",
+   "estimatedCost": "1 hour",
+   "decision": "CLOSED",
+   "cheap": true
+  },
+  {
+   "limitation": "Priority holds only within a bounded search; the full text of Luft et al. (2018, IJRR) was not available.",
+   "closingQuestion": "Has the divergence appeared elsewhere?",
+   "triedOrSearched": "Dated searches of the primary sources, web, arXiv, software repository, forward citations and the Evidence Press corpus; no author enquiry.",
+   "estimatedCost": "days",
+   "decision": "OPEN",
+   "cheap": false,
+   "reasonOpen": "Specialist review and correspondence are out of scope.",
+   "whyNotClosedNow": "Requires access to the 2018 full text and specialist review."
+  }
+ ],
+ "extensionScout": {
+  "by": "Internal AI-assisted reviewers and the lead, 4 November 2026",
+  "date": "2026-11-04",
+  "proposals": [
+   "Mild-instability divergence (close the gap to a^2 near 1)",
+   "Non-uniqueness of the steady state",
+   "Actual estimation error versus reported covariance",
+   "Stable-dynamics boundedness"
+  ],
+  "actions": [
+   "Closed in the revision round: Theorems 6.2 and 6.4, Corollaries 6.3 and 6.5 (computer-assisted), Proposition 3.1, Findings 7.1-7.2; remaining gaps recorded as open questions in Section 11"
+  ]
+ }
+}

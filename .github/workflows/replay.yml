@@ -1,0 +1,39 @@
+# SPDX-License-Identifier: MIT
+name: Replay
+on:
+  push:
+  pull_request:
+jobs:
+  checks:
+    name: Verification scripts (blocking)
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Check MANIFEST.sha256
+        run: sha256sum -c MANIFEST.sha256
+      - name: Install pinned packages
+        run: python -m pip install -r requirements.txt
+      - name: Exact checks and certificates on a copy, with and without -O; outputs must equal the shipped results
+        run: |
+          cp -R . "$RUNNER_TEMP/pkg"
+          cd "$RUNNER_TEMP/pkg"
+          for F in "" "-O"; do
+            if [ -z "$F" ]; then M=normal; else M=O; fi
+            O="$RUNNER_TEMP/out_$M"
+            for s in verify_pairwise_divergence verify_exact verify_anchored_identity fingerprints; do
+              python -I -B $F scripts/$s.py --out "$O/$s" > /dev/null
+              cmp "$O/$s/$s.json" "results/$M/$s/$s.json"
+            done
+            python -I -B $F scripts/cert_x1_tail.py --out "$O/x1_tail" --a2max 69/50 --step 1/500 --rad 0.006 --theta0 1e-6 > /dev/null
+            python -I -B $F scripts/cert_x1_entry.py --out "$O/x1_entry" --tail "$O/x1_tail/x1_tail.json" --a2 100000001/100000000 1000001/1000000 1001/1000 101/100 21/20 11/10 6/5 69/50 --c "10**12" --K 120 > /dev/null
+            python -I -B $F scripts/cert_x2_bounded.py --out "$O/x2" > /dev/null
+            cmp "$O/x1_tail/x1_tail.json" "results/$M/x1_tail/x1_tail.json"
+            cmp "$O/x1_entry/x1_entry.json" "results/$M/x1_entry/x1_entry.json"
+            cmp "$O/x2/x2_bounded.json" "results/$M/x2/x2_bounded.json"
+          done
+      - name: Working tree unchanged
+        run: test -z "$(git status --porcelain)"
