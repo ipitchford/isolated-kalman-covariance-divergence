@@ -30,8 +30,9 @@
  \large A counterexample to the isolated Kalman filtering convergence conjecture}
 \author{Anonymous\thanks{Text released under CC0~1.0; code under the MIT licence.
  See the accompanying reproducibility package,
- \href{https://doi.org/10.5281/zenodo.23935675}{doi:10.5281/zenodo.23935675}.}}
-\date{4 November 2026}
+ \href{https://doi.org/10.5281/zenodo.23941896}{doi:10.5281/zenodo.23941896} (version 0.2.0;
+ all versions: \href{https://doi.org/10.5281/zenodo.23935674}{doi:10.5281/zenodo.23935674}).}}
+\date{Version 0.2.0, 4 November 2026 (corrects version 0.1.0 of the same date)}
 \begin{document}
 \maketitle
 
@@ -658,6 +659,11 @@ Under condition 2, block-diagonal predictions with positive definite node noise 
 admissibility, so every finite schedule remains well defined.
 \end{theorem}
 
+For participant pairs, a closely related sufficiency statement is due to Luft et
+al.~\citep[Proposition~1]{Luft2018}: if every two-robot block is positive definite, their update
+(eq.~(26), and the scaled eq.~(28) with $|\lambda|\le1$) keeps every two-robot block positive
+definite. Theorem~\ref{thm:family} adds the converse and participant groups of any size.
+
 \begin{proof}
 \emph{Sufficiency.} Fix an update on $U$; then $0\prec C\preceq B$. A target group $V$ disjoint
 from $U$ is unchanged and $V=U$ becomes $C$. If $U\cap V=\{i\}$, write the old block on $V$ as
@@ -745,15 +751,45 @@ system has this property.
 and what is specific to the IsoKF recurrence.}
 
 \paragraph{The IsoKF line.} The marginal-ratio cross-covariance correction comes from the
-decentralised collaborative localisation of Luft and co-authors~\citep{Luft2016,Luft2018} and
+decentralised collaborative localisation (DCL) of Luft and co-authors~\citep{Luft2016,Luft2018} and
 was developed into isolated Kalman filtering in the dissertation~\citep{Jung2023thesis} and the
 journal article~\citep{JungLuftWeiss2025}, which also gives the conjecture. Distributed
 multi-robot localisation with a decomposed centralised filter goes back at least to
-Roumeliotis and Bekey~\citep{RoumeliotisBekey2002}. A forward-citation check of
-\citep{JungLuftWeiss2025} on 4 November 2026 found two related citing works: the buffer-driven
-decentralised estimator D-GVIO~\citep{DGVIO2026} and the distributed Kalman-like observer of De
-Carli and Dimarogonas~\citep{DeCarliDimarogonas2025}. By their titles and abstracts neither
-analyses IsoKF covariance convergence; we did not read their full texts.
+Roumeliotis and Bekey~\citep{RoumeliotisBekey2002}.
+
+\paragraph{What Luft et al.\ (2018) establish.} In the journal article~\citep{Luft2018}, a
+relative measurement between robots $i$ and $j$ updates the pair exactly, leaves other robots
+unchanged, and corrects each cross term by
+$\Sigma_{ik}^{+}=\Sigma_{ii}^{+}(\Sigma_{ii})^{-1}\Sigma_{ik}$ \citep[eq.~(26)]{Luft2018}; for
+scalar nodes this is exactly \eqref{eq:ratio}. Their measurement models are generic, so pair
+sums are admissible. They also introduce the scaled variant
+$\Sigma_{ik}^{+}=\lambda\,\Sigma_{ii}^{+}(\Sigma_{ii})^{-1}\Sigma_{ik}$, with $\lambda=0$ keeping only
+the most recent partner's correlation \citep[eq.~(28)]{Luft2018}. Their Proposition~1 proves that if
+every two-robot submatrix is positive definite, every such update (and the scaled update with
+$|\lambda|\le1$) keeps every two-robot submatrix positive definite. Lemma~1 and Corollary~1 bound the
+one-step error of the cross-term approximation by $\|K_iF_j\|\sqrt{\epsilon_{ji}\epsilon_{ki}}$ in
+terms of conditional covariances. They note that any multiplicative cross-term update can
+underestimate cross-correlations, and they state that their estimator ``is not provably consistent
+in general''. On the UTIAS multi-robot dataset~\citep[Tables~2--4]{Luft2018} the filter's accuracy
+is within about 12\% of the centralised EKF, its normalised ANEES is below that of the EKF (it is
+more conservative), and its robustness is comparable to the EKF's. Luft et al.\ make no statement
+about boundedness, convergence or a steady state of the reported covariance over time, and give
+no example in which it diverges. Accordingly: the local well-posedness in
+Theorem~\ref{thm:main} for pairwise schedules already follows from their Proposition~1; their
+scaled family with $0\le\lambda\le1$, including $\lambda=0$, is a constant-factor case of
+Corollary~\ref{cor:atten}; and their observation of conservatism on real data is consistent in
+direction with Finding~\ref{find:error}, where the pessimism becomes unbounded. Since their
+correction is \eqref{eq:ratio}, Theorem~\ref{thm:main} is equally an example of unbounded
+reported covariance for their filter with linear models; it contradicts no claim they make.
+
+\paragraph{Citing works.} A forward-citation check of \citep{JungLuftWeiss2025} on 4 November
+2026 found two related citing works, both read in full. The distributed Kalman-like observer of
+De Carli and Dimarogonas~\citep{DeCarliDimarogonas2025} replaces process noise by a forgetting
+factor and proves uniform global exponential convergence for that observer; it remarks that the
+filter of~\citep{Luft2018} lacks formal stability guarantees, but gives no divergence example.
+The buffer-driven estimator D-GVIO~\citep{DGVIO2026} uses IsoKF-style buffers, enforces consistency
+by covariance intersection and reports NEES experiments; it does not analyse IsoKF covariance
+convergence.
 
 \paragraph{Consider (Schmidt) filters.} Updating only some states while holding others fixed is
 the classical Schmidt--Kalman or consider filter~\citep{Schmidt1966}. Its exact cross-covariance
@@ -792,7 +828,7 @@ non-commuting blocks. Certificates C1--C3 use outward-rounded interval arithmeti
 Every script performs explicit checks that also run under \texttt{python -O} and exits with a
 nonzero code on failure; all outputs were regenerated in normal and \texttt{-O} mode and agree
 byte for byte. All scripts, certificates and outputs are archived with this paper at
-\href{https://doi.org/10.5281/zenodo.23935675}{doi:10.5281/zenodo.23935675}. Figure~\ref{fig:growth} illustrates Theorem~\ref{thm:main}; its infinite-horizon
+\href{https://doi.org/10.5281/zenodo.23941896}{doi:10.5281/zenodo.23941896}. Figure~\ref{fig:growth} illustrates Theorem~\ref{thm:main}; its infinite-horizon
 conclusion follows from the proof, not from the plot.
 
 \begin{figure}[ht]
@@ -817,10 +853,16 @@ the ordinary Kalman filter and changes the architecture being tested.
 \paragraph{Prior-art search.} Two web engines, arXiv, the publisher's full text of
 \citep{JungLuftWeiss2025}, the full 2016 precursor~\citep{Luft2016}, relevant chapters of
 \citep{Jung2023thesis}, the software repository and a forward-citation sweep were searched on
-1--4 November 2026. The full text of the 2018 journal article~\citep{Luft2018} was not
-available to us and was inspected at abstract level only; since~\citep{JungLuftWeiss2025} states
-that its correction equals that of Luft et al., a divergence analysis there would bear on this
-work. No matching theorem was found in the inspected corpus.
+1--4 November 2026. For version 0.2.0 the full 2018 journal article~\citep{Luft2018} and both
+citing works were read in full on 4 November 2026; Section~\ref{sec:related} records what they
+establish. No matching theorem was found in the inspected corpus.
+
+\paragraph{Changes in version 0.2.0.} Version 0.1.0 compared this work with the 2018 journal
+article~\citep{Luft2018} at abstract level only. Version 0.2.0 compares it with the full text and
+credits that article's Proposition~1 (positive definiteness of two-robot blocks) and scaled
+correction (eq.~(28)) where our results overlap; it also replaces title-level descriptions of the
+two citing works with full-text ones. No theorem, proof, certificate, computation or numerical
+finding has changed.
 
 \paragraph{Open questions.}
 (i) Entry into the escape region for every $a^2\in(1,1.38]$, and anything proved for

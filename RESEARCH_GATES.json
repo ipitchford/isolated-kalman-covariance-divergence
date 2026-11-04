@@ -1,6 +1,6 @@
 {
  "schemaVersion": "1.0",
- "provenance": "Compiled 4 November 2026 for release 0.1.0-candidate from the dated prior-art and corpus checks of 1-4 November 2026 (manuscript Section 11 Prior-art search; internal corpus check) and the reference retrieval for the bibliography. It documents the scrutiny performed, not historical priority. No new priority search was run at release preparation.",
+ "provenance": "Compiled 4 November 2026 for release 0.1.0-candidate from the dated prior-art and corpus checks of 1-4 November 2026 (manuscript Section 11 Prior-art search; internal corpus check) and the reference retrieval for the bibliography; updated 4 November 2026 for 0.2.0-candidate after reading Luft et al. (2018, IJRR) and the two citing works in full. It documents the scrutiny performed, not historical priority.",
  "contributionMap": [
   {
    "claim": "Theorem 4.1: a three-node pair-sum system with A = 3I, observable from one epoch and controllable, whose IsoKF reported marginals satisfy m_k >= (5/4)(9/5)^k - 1/4 while every local block stays positive definite and the centralised Kalman filter stays <= 3/4; refutes the IsoKF convergence conjecture.",
@@ -114,6 +114,27 @@
    "readWhat": "Source code (not compiled or run)",
    "date": "2026-11-02",
    "evidenceLocator": "manuscript Section 11 Software scope"
+  },
+  {
+   "citation": "Luft, Schubert, Roumeliotis and Burgard, Recursive decentralized localization for multi-robot systems with asynchronous pairwise communication, IJRR 37(10):1152-1167, 2018, DOI 10.1177/0278364918760698",
+   "usedFor": "Journal source of the correction (eq. 26), scaled variant (eq. 28), Proposition 1 (two-robot blocks stay positive definite), one-step error bounds, UTIAS experiments; priority comparison for 0.2.0",
+   "readWhat": "Full text including appendices",
+   "date": "2026-11-04",
+   "evidenceLocator": "manuscript Sections 8, 10 and 11"
+  },
+  {
+   "citation": "De Carli and Dimarogonas, A distributed Kalman-like observer with dynamic inversion-based correction for multi-agent estimation, IEEE Control Systems Letters 9:523-528, 2025, DOI 10.1109/lcsys.2025.3576671",
+   "usedFor": "Forward-citation check",
+   "readWhat": "Full text (open access)",
+   "date": "2026-11-04",
+   "evidenceLocator": "manuscript Section 10"
+  },
+  {
+   "citation": "Luo, Lu, Guo and Li, D-GVIO, arXiv:2603.01404, 2026",
+   "usedFor": "Forward-citation check",
+   "readWhat": "Full text",
+   "date": "2026-11-04",
+   "evidenceLocator": "manuscript Section 10"
   }
  ],
  "limitationTriage": [
@@ -156,9 +177,9 @@
    "cheap": true
   },
   {
-   "limitation": "Priority holds only within a bounded search; the full text of Luft et al. (2018, IJRR) was not available.",
+   "limitation": "Priority holds only within a bounded search.",
    "closingQuestion": "Has the divergence appeared elsewhere?",
-   "triedOrSearched": "Dated searches of the primary sources, web, arXiv, software repository, forward citations and the Evidence Press corpus; no author enquiry.",
+   "triedOrSearched": "Dated searches of the primary sources, web, arXiv, software repository, forward citations and the Evidence Press corpus; no author enquiry. For 0.2.0 the full text of Luft et al. (2018, IJRR) and of both citing works (De Carli and Dimarogonas 2025; D-GVIO 2026) were read: none states or exhibits divergence of the covariance; Luft et al. Proposition 1 and eq. (28) are credited.",
    "estimatedCost": "days",
    "decision": "OPEN",
    "cheap": false,
