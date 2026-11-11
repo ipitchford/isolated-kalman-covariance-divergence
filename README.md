@@ -2,7 +2,7 @@
 
 **A counterexample to the isolated Kalman filtering convergence conjecture**
 
-Author: Anonymous · Version 0.2.0-candidate, 4 November 2026 · Text CC0 1.0 · Code MIT (see `LICENSE.md`)
+Author: Anonymous · Version 0.3.0-candidate, 11 November 2026 · Text CC0 1.0 · Code MIT (see `LICENSE.md`)
 
 Status: unrefereed candidate. Prepared with AI assistance and checked internally. No human peer review; no proof is formally (machine) verified.
 
@@ -54,7 +54,7 @@ python3 -I tools/make_refs.py refs.bib tools/records
 ## How to cite
 
 Anonymous (2026). *Observable systems with divergent isolated Kalman covariances: a counterexample to the isolated Kalman
-filtering convergence conjecture* (Version 0.2.0-candidate). Evidence Press. https://doi.org/10.5281/zenodo.23941896
+filtering convergence conjecture* (Version 0.3.0-candidate). Evidence Press. https://doi.org/10.5281/zenodo.24142193
 (concept DOI for all versions: 10.5281/zenodo.23935674).
 
 Release page: https://evidencepress.org/releases/isolated-kalman-covariance-divergence/ · Machine index: [AI_INDEX.md](AI_INDEX.md) ·
@@ -62,14 +62,15 @@ Citation file: [CITATION.cff](CITATION.cff) · Research gates: [RESEARCH_GATES.j
 
 ## Version history
 
-- **0.2.0-candidate (4 November 2026), this version.** Correction. Version 0.1.0 compared the work with Luft, Schubert, Roumeliotis and Burgard (2018, *IJRR*, doi:10.1177/0278364918760698) at abstract level only. This version compares it with the full text. It credits their Proposition 1 (two-robot blocks stay positive definite) at Theorem 8.1 and their scaled correction (eq. 28) at Corollary 5.3, and adds a full-text comparison with the two citing works (manuscript Sections 8, 10 and 11). No theorem, proof, certificate, computation or numerical finding changed; scripts and results are byte-identical to 0.1.0.
+- **0.3.0-candidate (11 November 2026), this version.** Correction. Versions 0.1.0 and 0.2.0 said that in Numerical finding 7.1 the actual error variances for a² = 9 converge to the limit (17/4, 13/4, 13/4). Replaying the archived x3_true_error.py at consecutive epochs shows a period-two cycle instead: (17/4, 13/4, 13/4) after even epochs and (3/4, 21/4, 3/4) after odd epochs, so the largest actual error variance alternates between 4.25 and 5.25. The finding, its table, the spectral-radius remark and the comparison with the centralised filter (now a factor of about five to eight) are corrected. The actual error is still bounded in these tests; no theorem, proof, certificate, script or recorded output changed. See [CORRECTIONS.md](CORRECTIONS.md).
+- **0.2.0-candidate (4 November 2026)**, https://doi.org/10.5281/zenodo.23941896 (tag `v0.2.0-candidate`). Correction. Version 0.1.0 compared the work with Luft, Schubert, Roumeliotis and Burgard (2018, *IJRR*, doi:10.1177/0278364918760698) at abstract level only. This version compares it with the full text. It credits their Proposition 1 (two-robot blocks stay positive definite) at Theorem 8.1 and their scaled correction (eq. 28) at Corollary 5.3, and adds a full-text comparison with the two citing works (manuscript Sections 8, 10 and 11). No theorem, proof, certificate, computation or numerical finding changed; scripts and results are byte-identical to 0.1.0.
 - **0.1.0-candidate (4 November 2026).** First release, https://doi.org/10.5281/zenodo.23935675 (tag `v0.1.0-candidate`).
 
 ## Boundaries
 
 - The object studied is the mathematical recurrence of the published update equations. The `ikf_lib` software was inspected at a pinned commit, but not compiled or run. No software failure is claimed.
 - Theorems 6.2–6.4 are computer-assisted. Escape from large priors is certified for every a² in (1, 1.38]. Entry from an explicit prior is certified only at eight listed values of a². Nothing is proved for a² in (1.38, 2+√5).
-- The bounded actual error and the divergence thresholds are numerical findings, not theorems. The deletion threshold is close to 2+√5 but has an unresolved finite-horizon bias.
+- The bounded actual error and the divergence thresholds are numerical findings, not theorems. For a² = 9 the actual error variances cycle with period two rather than converging. The deletion threshold is close to 2+√5 but has an unresolved finite-horizon bias.
 - At a = 1, large priors are only shown to leave the certified regime; global boundedness there is not established.
 - The results for Schur-stable dynamics concern boundedness only. Uniqueness of the steady state for stable dynamics remains open.
 - The novelty statement rests on a bounded literature search. Luft et al. (2018, IJRR), the journal source of the correction factor, was read in full: it proves that two-robot blocks stay positive definite (credited at Theorem 8.1) but makes no claim about boundedness or convergence of the covariance and gives no divergence example.

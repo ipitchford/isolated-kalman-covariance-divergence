@@ -30,9 +30,9 @@
  \large A counterexample to the isolated Kalman filtering convergence conjecture}
 \author{Anonymous\thanks{Text released under CC0~1.0; code under the MIT licence.
  See the accompanying reproducibility package,
- \href{https://doi.org/10.5281/zenodo.23941896}{doi:10.5281/zenodo.23941896} (version 0.2.0;
+ \href{https://doi.org/10.5281/zenodo.24142193}{doi:10.5281/zenodo.24142193} (version 0.3.0;
  all versions: \href{https://doi.org/10.5281/zenodo.23935674}{doi:10.5281/zenodo.23935674}).}}
-\date{Version 0.2.0, 4 November 2026 (corrects version 0.1.0 of the same date)}
+\date{Version 0.3.0, 11 November 2026 (corrects versions 0.1.0 and 0.2.0 of 4 November 2026)}
 \begin{document}
 \maketitle
 
@@ -572,7 +572,7 @@ $F=I-Kh$ embedded in three dimensions, from $\Sigma_0=P_0$. No Monte Carlo is in
 evaluate it in 80-digit arithmetic.
 
 \begin{finding}[Bounded actual error, divergent reported covariance]\label{find:error}
-In the tested divergent cases the actual error covariance appears to converge to a bounded limit while the
+In the tested divergent cases the actual error covariance appears to stay bounded while the
 reported covariance diverges (the bounded case $a^2=1.05$, $P_0=I$ is included for comparison). The
 computation needs high precision: in double precision the $a^2=9$ error recursion blows up spuriously
 through cancellation in $p-c$.
@@ -580,9 +580,10 @@ through cancellation in $p-c$.
 \begin{center}\small
 \begin{tabular}{@{}llll@{}}
 \toprule
-case & reported $\max_iP_{ii}$ & actual error variances (limit) & centralised KF\\
+case & reported $\max_iP_{ii}$ & actual error variances (late $k$) & centralised KF\\
 \midrule
-$a^2=9$, $P_0=I$ (Thm.~\ref{thm:main}) & $1.0\times10^{190}$ at $k=200$ & $(4.25,\,3.25,\,3.25)$ & $0.678$\\
+$a^2=9$, $P_0=I$ (Thm.~\ref{thm:main}) & $1.0\times10^{190}$ at $k=200$ & $(4.25,\,3.25,\,3.25)$, even $k$ & $0.678$\\
+ & & $(0.75,\,5.25,\,0.75)$, odd $k$ & \\
 $a^2=1.05$, $P_0=I$ & $1.690$ (bounded) & $(0.556,\,0.793,\,0.512)$ & $0.485$\\
 $a^2=1.05$, $P_0=10^4I$ & $2.9\times10^{45}$ at $k=2000$ & $(0.561,\,0.776,\,0.496)$ & $0.485$\\
 $a^2=1.01$, $P_0=10^8I$ & $5.4\times10^{15}$ at $k=2000$ & $(0.556,\,0.765,\,0.493)$ & $0.482$\\
@@ -590,18 +591,23 @@ $a^2=2$, $P_0=I$ & $5.1\times10^{149}$ at $k=500$ & $(0.665,\,1.041,\,0.558)$ & 
 \bottomrule
 \end{tabular}
 \end{center}
-The gains stay of order one because they depend only on the bounded deficits, and the
-asymptotic epoch error-transition matrix has spectral radius below one ($\approx0$ for $a^2=9$,
-$0.45$--$0.57$ otherwise).
+For $a^2=9$ the actual error variances do not converge: after a short transient they repeat
+with period two, $(17/4,13/4,13/4)$ after even epochs and $(3/4,21/4,3/4)$ after odd epochs, so the
+largest error variance alternates between $4.25$ and $5.25$. In the other cases the listed values
+are constant from one epoch to the next. The gains stay of order one because they depend only on
+the bounded deficits. In the other cases the late one-epoch error-transition matrix has spectral
+radius $0.45$--$0.57$; for $a^2=9$ it alternates between $0$ and $1.5$, and the two-epoch product
+has spectral radius $\approx0$.
 \end{finding}
 
 \emph{Interpretation.} In these tests the failure is gross pessimism, not estimate divergence:
 the reported covariance stops meaning anything as a measure of error, while the estimate keeps
 a bounded error. The estimate is nevertheless worse than the centralised one: by up to about $90\%$ per node in
-the mild cases and by a factor of about five to six for $a^2=9$. A reported covariance that is
+the mild cases and by a factor of about five to eight for $a^2=9$ (per node, between about $4.8$ and $6.3$
+after even epochs and up to about $7.7$ after odd epochs). A reported covariance that is
 $10^{45}$ times too large is useless for outlier gating, for fusion with other sources, and for
 any consistency check, and it would make a downstream consumer ignore the estimate. We have not
-proved boundedness of the actual error; the observed limit $(17/4,13/4,13/4)$ for $a^2=9$ is
+proved boundedness of the actual error; the observed period-two cycle for $a^2=9$ is
 not derived analytically.
 
 \begin{finding}[Thresholds]\label{find:thresh}
@@ -828,7 +834,7 @@ non-commuting blocks. Certificates C1--C3 use outward-rounded interval arithmeti
 Every script performs explicit checks that also run under \texttt{python -O} and exits with a
 nonzero code on failure; all outputs were regenerated in normal and \texttt{-O} mode and agree
 byte for byte. All scripts, certificates and outputs are archived with this paper at
-\href{https://doi.org/10.5281/zenodo.23941896}{doi:10.5281/zenodo.23941896}. Figure~\ref{fig:growth} illustrates Theorem~\ref{thm:main}; its infinite-horizon
+\href{https://doi.org/10.5281/zenodo.24142193}{doi:10.5281/zenodo.24142193}. Figure~\ref{fig:growth} illustrates Theorem~\ref{thm:main}; its infinite-horizon
 conclusion follows from the proof, not from the plot.
 
 \begin{figure}[ht]
@@ -856,6 +862,16 @@ the ordinary Kalman filter and changes the architecture being tested.
 1--4 November 2026. For version 0.2.0 the full 2018 journal article~\citep{Luft2018} and both
 citing works were read in full on 4 November 2026; Section~\ref{sec:related} records what they
 establish. No matching theorem was found in the inspected corpus.
+
+\paragraph{Changes in version 0.3.0.} Versions 0.1.0 and 0.2.0 said that, in Numerical
+finding~\ref{find:error}, the actual error variances for $a^2=9$ converge to the limit
+$(17/4,13/4,13/4)$, that the asymptotic error-transition matrix has spectral radius $\approx0$
+there, and that the estimate is worse than the centralised one by a factor of about five to six.
+Replaying the archived script \texttt{x3\_true\_error.py} at consecutive epochs shows a period-two
+cycle instead: $(17/4,13/4,13/4)$ after even epochs (the value reported at $k=200$) and
+$(3/4,21/4,3/4)$ after odd epochs. The text and table now say so; the factor is about five to
+eight. The actual error is still bounded in these tests, and no theorem, proof, certificate,
+script or recorded output has changed.
 
 \paragraph{Changes in version 0.2.0.} Version 0.1.0 compared this work with the 2018 journal
 article~\citep{Luft2018} at abstract level only. Version 0.2.0 compares it with the full text and

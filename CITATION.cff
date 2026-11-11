@@ -4,9 +4,9 @@ title: "Observable systems with divergent isolated Kalman covariances: a counter
 type: software
 authors:
   - name: Anonymous
-version: 0.2.0-candidate
-doi: 10.5281/zenodo.23941896
-date-released: 2026-11-04
+version: 0.3.0-candidate
+doi: 10.5281/zenodo.24142193
+date-released: 2026-11-11
 repository-code: "https://github.com/ipitchford/isolated-kalman-covariance-divergence"
 url: "https://evidencepress.org/releases/isolated-kalman-covariance-divergence/"
 license:
@@ -14,8 +14,8 @@ license:
   - MIT
 identifiers:
   - type: doi
-    value: 10.5281/zenodo.23941896
-    description: "Version DOI (0.2.0-candidate)"
+    value: 10.5281/zenodo.24142193
+    description: "Version DOI (0.3.0-candidate)"
   - type: doi
     value: 10.5281/zenodo.23935674
     description: "Concept DOI (all versions)"

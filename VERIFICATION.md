@@ -1,6 +1,6 @@
 # Verification ledger
 
-The authoritative statement is `manuscript.tex` and its build `isokf_manuscript.pdf` (4 November 2026). Numbering below refers to that PDF.
+The authoritative statement is `manuscript.tex` and its build `isokf_manuscript.pdf` (version 0.3.0, 11 November 2026). Numbering below refers to that PDF.
 
 Evidence types:
 - **Proof**: a written analytic argument. No proof is machine-verified.
@@ -40,7 +40,7 @@ A copy of `verify_exact.py` with one expected determinant changed (−7/162 → 
 
 ## Build
 
-`pdflatex` + `bibtex` (TinyTeX): 18 pages, no undefined references or citations, no overfull boxes. Every page was inspected visually after rendering.
+`pdflatex` + `bibtex` (TinyTeX): 19 pages, no undefined references or citations, no overfull boxes. Every page was inspected visually after rendering.
 
 ## Limits of this ledger
 

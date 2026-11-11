@@ -1,8 +1,8 @@
-# AI index: divergent isolated Kalman covariances (v0.2.0-candidate)
+# AI index: divergent isolated Kalman covariances (v0.3.0-candidate)
 
 Machine-oriented map of claims, evidence and limits. Human readers should start with [README.md](README.md) and the
 paper [isokf_manuscript.pdf](isokf_manuscript.pdf) (LaTeX source [manuscript.tex](manuscript.tex), bibliography [refs.bib](refs.bib)).
-Version DOI 10.5281/zenodo.23941896 (0.2.0; corrects 0.1.0, 10.5281/zenodo.23935675); concept DOI 10.5281/zenodo.23935674. Target: the convergence conjecture for the
+Version DOI 10.5281/zenodo.24142193 (0.3.0; corrects 0.2.0, 10.5281/zenodo.23941896, and 0.1.0, 10.5281/zenodo.23935675); concept DOI 10.5281/zenodo.23935674. Target: the convergence conjecture for the
 isolated Kalman filter (IsoKF) of Jung, Luft and Weiss, *Autonomous Robots* 49(1):7, 2025, DOI 10.1007/s10514-025-10191-x
 (Conjecture 1 in the manuscript, quoted verbatim).
 
@@ -54,4 +54,6 @@ proofs. The counterexamples use pair-sum observation channels, not plain differe
 search of 1-4 November 2026. Luft et al. (2018, IJRR), read in full for 0.2.0, introduce the correction (their eq. 26), its
 scaled variant (eq. 28) and prove two-robot blocks stay positive definite (Proposition 1, credited at Theorem 8.1); they make
 no covariance boundedness or convergence claim and give no divergence example. Version 0.2.0 changes only this comparison
-(manuscript Sections 10-11); no theorem, proof, certificate or computation changed.
+(manuscript Sections 10-11); no theorem, proof, certificate or computation changed. Version 0.3.0 corrects Numerical finding 7.1 (C8):
+for a^2 = 9 the actual error variances cycle with period two, (17/4,13/4,13/4) after even and (3/4,21/4,3/4) after odd
+epochs, rather than converging; see [CORRECTIONS.md](CORRECTIONS.md). Scripts and recorded outputs are unchanged.
